@@ -1,30 +1,36 @@
+// Define the Rectangle class
 class Rectangle {
-  constructor(width, height) {
-    this._width = width;
-    this._height = height;
-  }
+    constructor(width, height) {
+        this._width = width;
+        this._height = height;
+    }
 
-  get width() {
-    return this._width;
-  }
+    // Getter for width
+    get width() {
+        return this._width;
+    }
 
-  get height() {
-    return this._height;
-  }
+    // Getter for height
+    get height() {
+        return this._height;
+    }
 
-  getArea() {
-    return this.width * this.height;
-  }
+    // Method to calculate the area of the rectangle
+    getArea() {
+        return this._width * this._height;
+    }
 }
 
+// Define the Square class, extending Rectangle
 class Square extends Rectangle {
-  constructor(side) {
-    super(side, side);
-  }
+    constructor(side) {
+        super(side, side);
+    }
 
-  getPerimeter() {
-    return 4 * this.width;
-  }
+    // Method to calculate the perimeter of the square
+    getPerimeter() {
+        return 4 * this._width;
+    }
 }
 
 // Example usage
